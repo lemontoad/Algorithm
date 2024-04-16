@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+int sum(int *a, int *b, int *c)
+{
+    *c = *a + *b;
+
+}
+
 int main(void)
 {   
     /*
@@ -88,6 +94,64 @@ int main(void)
 
     printf("a: %d, b: %d, c: %d\n", a, b, c); // a: 7, b: 6, c: 6
     */
-    return 0;
+    /*//아직 이거 완성 못함
+    int arr[] = {1, 2, 3, 4, 5};
+    int *ptr = arr; // ptr은 arr[0]의 주소를 가리킴
+    printf("%lld, %lld \n ", *ptr, arr[0]); // 출력: 1
+    ptr++; // ptr은 arr[1]의 주소를 가리킴
+    printf("%lld, %lld \n ", *ptr, arr[0]); // 출력: 2
+    */
+    /*
+    int *ptr = (int *)malloc(sizeof(int)*5);
+    *(ptr+0)=1;
+    *(ptr+0)=2;
+    *(ptr+0)=1;
+    *(ptr+0)=1;
+    *(ptr+0)=1;
+
+    for(int i=0; i!=5; i++) {
+        printf("%d", *(ptr+i));
+    }
+    */
+    /*
+    int a = 1;
+    int b = 3;
+    int c = 0;
+
+    int * ptrA = &a;
+    int * ptrB = &b;
+    int * ptrC = &c;
+
+    sum(ptrA, ptrB, ptrC);
+    printf("%d\n", c);
+   */
+   /*
+   char arr[100];
+   for(int i = 0; i!= 100; i++) 
+   {
+    arr[i] = 65;
+   }
+   arr[99] = 0;
+   printf("%s\n", arr);
+   for(int i = 0; i!= 100; i++) 
+   {
+    printf("%d", arr[i]);
+   }
+   */
+
+   char arr[10];
+   char secret[10]= "secret";
+   scanf("%s", arr);
+   printf("%lld\n", arr);
+   printf("%lld\n", secret);
+
+   printf("%lld\n", arr);
+   printf("%lld\n", secret);
+   for(int i=0; i!=10; ++i)
+   {
+    printf("%c", secret[i]);
+   }
+   printf("\n");
+   return 0;
 }
 //실행: ls, add ., gcc 1001.c, ./a.out
